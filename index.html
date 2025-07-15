@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aishika manu - personal logbook</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Georgia', serif;
@@ -36,6 +40,13 @@
             color: #2c3e50;
         }
 
+        .tagline {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
         .contact-links {
             margin-bottom: 30px;
         }
@@ -52,35 +63,21 @@
         }
 
         .intro {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
+            text-align: center;
             margin-bottom: 50px;
         }
 
-        .intro img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .intro-text {
-            text-align: left;
-            max-width: 600px;
-        }
-
-        .intro-text h2 {
+        .intro h2 {
             font-size: 1.8em;
             margin-bottom: 20px;
             color: #2c3e50;
         }
 
-        .intro-text p {
+        .intro p {
             font-size: 1.1em;
             color: #555;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .contents {
@@ -130,14 +127,23 @@
             font-size: 0.9em;
         }
 
+        /* Responsive design */
         @media (max-width: 768px) {
-            .container { padding: 30px 20px; }
-            .name { font-size: 2em; }
-            .contact-links a { display: block; margin: 5px 0; }
-            .intro { flex-direction: column; text-align: center; }
-            .intro-text { text-align: center; }
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .name {
+                font-size: 2em;
+            }
+            
+            .contact-links a {
+                display: block;
+                margin: 5px 0;
+            }
         }
 
+        /* Page styles for individual sections */
         .page-header {
             text-align: center;
             margin-bottom: 40px;
@@ -157,7 +163,9 @@
             font-size: 0.9em;
         }
 
-        .back-link:hover { text-decoration: underline; }
+        .back-link:hover {
+            text-decoration: underline;
+        }
 
         .section {
             margin-bottom: 40px;
@@ -183,16 +191,6 @@
             font-size: 1.2em;
             color: #2c3e50;
             margin-bottom: 10px;
-        }
-
-        .entry-title a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .entry-title a:hover {
-            color: #e74c3c;
-            text-decoration: underline;
         }
 
         .entry-meta {
@@ -230,11 +228,8 @@
         </div>
 
         <div class="intro">
-            <img src="images/profile.jpeg" alt="profile">
-            <div class="intro-text">
-                <h2>hello</h2>
-                <p>this is not my personal portfolio website. this is just a logbook. it includes summaries of papers i read, projects i tinker with, and occasional notes from outside the academic bubble. it's meant to be messy, evolving, and real.</p>
-            </div>
+            <h2>hello</h2>
+            <p>this is not my personal portfolio website. this is just a logbook. it includes summaries of papers i read, projects i tinker with, and occasional notes from outside the academic bubble. it's meant to be messy, evolving, and real.</p>
         </div>
 
         <div class="contents">
@@ -255,41 +250,40 @@
     <!-- Paper Notes Page -->
     <div id="papers-page" class="container" style="display: none;">
         <div class="page-header">
-            <h1 class="page-title">Paper Notes</h1>
-            <a href="javascript:void(0)" class="back-link" onclick="showHome()">← Back to Home</a>
+            <h1 class="page-title">paper notes</h1>
+            <a href="javascript:void(0)" class="back-link" onclick="showHome()">← back to home</a>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Recent Reads</h2>
+            <h2 class="section-title">recent reads</h2>
+            
             <div class="entry">
-                <h3 class="entry-title">Attention Is All You Need</h3>
-                <div class="entry-meta">Vaswani et al. (2017) • Read: Jan 2025</div>
+                <h3 class="entry-title">arena: a general evaluation platform and building toolkit for multi-agent intelligence</h3>
+                <div class="entry-meta">arxiv:2504.20996 • read: pending</div>
                 <div class="entry-content">
-                    <p>Revolutionary paper introducing the Transformer architecture. Key insights: self-attention mechanisms can replace recurrent layers entirely, leading to better parallelization and performance.</p>
-                    <p><strong>Key takeaways:</strong> Multi-head attention, positional encoding, layer normalization patterns that became standard.</p>
-                    <span class="tag">Deep Learning</span>
-                    <span class="tag">NLP</span>
-                    <span class="tag">Architecture</span>
+                    <p>summary and thoughts to be added...</p>
+                    <span class="tag">multi-agent</span>
+                    <span class="tag">evaluation</span>
                 </div>
             </div>
 
             <div class="entry">
-                <h3 class="entry-title">Add your paper notes here...</h3>
-                <div class="entry-meta">Author (Year) • Read: Date</div>
+                <h3 class="entry-title">exploring the role of large language models in agent-based modeling</h3>
+                <div class="entry-meta">arxiv:2505.18816 • read: pending</div>
                 <div class="entry-content">
-                    <p>Your summary and thoughts...</p>
-                    <span class="tag">Tag1</span>
-                    <span class="tag">Tag2</span>
+                    <p>summary and thoughts to be added...</p>
+                    <span class="tag">llm</span>
+                    <span class="tag">agent-based modeling</span>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Paper Queue</h2>
+            <h2 class="section-title">paper queue</h2>
             <ul>
-                <li>Paper 1 - Reason for reading</li>
-                <li>Paper 2 - Reason for reading</li>
-                <li>Paper 3 - Reason for reading</li>
+                <li>jailbreaking leading safety-aligned llms with simple adaptive attacks (arxiv:2403.10517)</li>
+                <li>scaling llm test-time compute optimally can be more effective than scaling model parameters (arxiv:2506.17774)</li>
+                <li>improving mathematical reasoning capabilities of small language models via feedback-driven self-refinement (arxiv:2501.03575v1)</li>
             </ul>
         </div>
     </div>
@@ -297,44 +291,43 @@
     <!-- Projects Page -->
     <div id="projects-page" class="container" style="display: none;">
         <div class="page-header">
-            <h1 class="page-title">Projects & Experiments</h1>
-            <a href="javascript:void(0)" class="back-link" onclick="showHome()">← Back to Home</a>
+            <h1 class="page-title">projects & experiments</h1>
+            <a href="javascript:void(0)" class="back-link" onclick="showHome()">← back to home</a>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Active Projects</h2>
+            <h2 class="section-title">active projects</h2>
+            
             <div class="entry">
-                <h3 class="entry-title">Project Name</h3>
-                <div class="entry-meta">Started: Date • Status: In Progress</div>
+                <h3 class="entry-title">competitive programming club</h3>
+                <div class="entry-meta">started: recent • status: in progress</div>
                 <div class="entry-content">
-                    <p>Brief description of what you're building and why.</p>
-                    <p><strong>Current focus:</strong> What you're working on right now.</p>
-                    <p><strong>Next steps:</strong> What's coming up.</p>
-                    <span class="tag">Python</span>
-                    <span class="tag">Machine Learning</span>
+                    <p>trying to build a competitive programming club in college to foster algorithmic thinking and problem-solving skills among students.</p>
+                    <p><strong>current focus:</strong> gathering interested students and finding faculty support.</p>
+                    <p><strong>next steps:</strong> organize initial meetings and create a curriculum structure.</p>
+                    <span class="tag">competitive programming</span>
+                    <span class="tag">club building</span>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h3 class="entry-title">research-oriented club</h3>
+                <div class="entry-meta">started: recent • status: planning</div>
+                <div class="entry-content">
+                    <p>building a research-oriented club in college to encourage students to engage with academic research and develop research skills.</p>
+                    <p><strong>current focus:</strong> defining the club's mission and structure.</p>
+                    <p><strong>next steps:</strong> recruit founding members and establish partnerships with faculty.</p>
+                    <span class="tag">research</span>
+                    <span class="tag">academic</span>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Completed Projects</h2>
-            <div class="entry">
-                <h3 class="entry-title">Previous Project</h3>
-                <div class="entry-meta">Completed: Date</div>
-                <div class="entry-content">
-                    <p>What you built and what you learned.</p>
-                    <span class="tag">Web Dev</span>
-                    <span class="tag">JavaScript</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Ideas & Backlog</h2>
+            <h2 class="section-title">ideas & backlog</h2>
             <ul>
-                <li>Idea 1 - Brief description</li>
-                <li>Idea 2 - Brief description</li>
-                <li>Idea 3 - Brief description</li>
+                <li>font club - exploring typography and design principles</li>
+                <li>finance club - pushing people towards understanding financial literacy and markets</li>
             </ul>
         </div>
     </div>
@@ -342,71 +335,78 @@
     <!-- Side Interests Page -->
     <div id="interests-page" class="container" style="display: none;">
         <div class="page-header">
-            <h1 class="page-title">Side Interests</h1>
-            <a href="javascript:void(0)" class="back-link" onclick="showHome()">← Back to Home</a>
+            <h1 class="page-title">side interests</h1>
+            <a href="javascript:void(0)" class="back-link" onclick="showHome()">← back to home</a>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Current Fascinations</h2>
+            <h2 class="section-title">current fascinations</h2>
+            
             <div class="entry">
-                <h3 class="entry-title">Topic/Interest</h3>
-                <div class="entry-meta">Exploring since: Date</div>
+                <h3 class="entry-title">documentaries and movies</h3>
+                <div class="entry-meta">exploring since: ongoing</div>
                 <div class="entry-content">
-                    <p>What draws you to this topic and what you're learning.</p>
-                    <span class="tag">Category</span>
+                    <p>really interested in how movies function and the documentation of it. fascinated by how people look at films, the storytelling techniques, and the craft behind filmmaking.</p>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Books & Resources</h2>
+            <h2 class="section-title">books & resources</h2>
             <ul>
-                <li><strong>Book Title</strong> by Author - Your thoughts</li>
-                <li><strong>Resource/Course</strong> - What you're getting from it</li>
+                <li><strong>gone with the wind</strong> by margaret mitchell - currently reading</li>
+                <li><strong>various film analysis resources</strong> - exploring different perspectives on cinema</li>
             </ul>
         </div>
     </div>
 
     <!-- Reflections Page -->
+     
     <div id="reflections-page" class="container" style="display: none;">
         <div class="page-header">
-            <h1 class="page-title">Reflections / Blog</h1>
-            <a href="javascript:void(0)" class="back-link" onclick="showHome()">← Back to Home</a>
+            <h1 class="page-title">reflections / blog</h1>
+            <a href="javascript:void(0)" class="back-link" onclick="showHome()">← back to home</a>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Recent Thoughts</h2>
+            <h2 class="section-title">recent thoughts</h2>
+            
             <div class="entry">
-                <h3 class="entry-title">
-                    <a href="https://sillysnoopies.substack.com/" target="_blank">silly snoopies – reflections, stories & blog</a>
-                </h3>
-                <div class="entry-meta">Hosted on Substack</div>
-                <div class="entry-content">
-                    <p>This is where I post personal reflections, casual essays, and creative ramblings. It’s separate from the strictly academic logbook vibe — a little looser, sometimes sillier, always real.</p>
-                    <span class="tag">Blog</span>
-                    <span class="tag">Reflections</span>
-                    <span class="tag">Substack</span>
-                </div>
-            </div>
-        </div>
+                <div class="section">
+    <h2 class="section-title">follow blog</h2>
+    <div class="entry-content" style="text-align: center;">
+        <a href="https://sillysnoopies.substack.com/" target="_blank" style="color: #e74c3c; font-weight: bold;">
+            illysnoopies.substack.com
+        </a>
+    </div>
+</div>
     </div>
 
+
     <script>
+        // Simple navigation
         function showPage(pageId) {
+            // Hide all pages
             document.querySelector('.container').style.display = 'none';
             document.querySelectorAll('[id$="-page"]').forEach(page => {
                 page.style.display = 'none';
             });
+            
+            // Show selected page
             document.getElementById(pageId + '-page').style.display = 'block';
         }
 
         function showHome() {
+            // Hide all pages
             document.querySelectorAll('[id$="-page"]').forEach(page => {
                 page.style.display = 'none';
             });
+            
+            // Show home
             document.querySelector('.container').style.display = 'block';
         }
 
+        // Set last updated date
         document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString();
     </script>
 </body>
